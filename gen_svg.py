@@ -10,4 +10,4 @@ for dot_file in cwd.rglob("*.dot"):
     # convert to svg file and open for preview
     svg_file = str(dot_file.with_suffix('.svg'))
     g[0].write_svg(svg_file)
-    subprocess.open(svg_file)
+    subprocess.call(("open", svg_file))
